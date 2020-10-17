@@ -15,7 +15,7 @@ pip install pytype
 conda install pytype
 ```
 ## Usage
-A proof-of-concept CLI tool is hosted at:
+A proof-of-concept CLI tool is hosted at:\
 https://github.com/greysonDEV/typeshell-cli
 
 ## Docu-mini-tation
