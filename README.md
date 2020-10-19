@@ -2,7 +2,7 @@
 
 ## Description
 pytyper is a Python library that provides the user with basic functions that deal with typing and typing tests. A few of many functions include calculating WPM and accuracy.\
-Not only does pytyper implement calculations for typing tests, it also implements string modification and comparison, along with number formatting.
+Not only does pytyper implement typing calculations, it also implements string modification, comparison, and number formatting.
 
 ## Installation
 pytyper is currently in the process of being uploaded to `PyPI` for installation.
