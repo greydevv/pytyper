@@ -339,4 +339,97 @@ Output (*str*):
 
 ## SessionData
 
+`SessionData` is a pytyper class that is effective in managing all typing tests and statistics for a typing session. It is also responsible for calculating the average of all of the numerical statistics for the entire session.
+
+#### initializer
+
+Required parameters (1): **tests** (*list*: *TestData*)
+Optional parameters (1): **round_stats** (*bool*, default: `True`)
+
+Examples:
+```python
+tests = [
+	TestData("Actions speak louder than words.", "Actions speak louder than words.", 4.58),
+	TestData("A fool and his money are soon parted.", "A fool anf his miney are soon partid.", 3.53),
+	TestData("Appearances can be deceptive.", "Appesrances csn be deciptive.", 2.62)
+	]
+
+sd = SessionData(tests)
+```
+
+Notes:\
+Notice how the required parameter, **tests**, must be a list of type TestData. This is required for the success of calculations done on the statistics across all tests taken within this session. Therefore, the initializer will throw an error if the types of the items in the list are not all of type TestData:
+
+> TypeError: SessionData constructor not properly called!
+
+#### add_tests
+
+`add_tests` adds a list of tests to SessionData's existing list of tests.
+
+Required parameters (1): **tests** (*list*: *TestData*)
+
+Examples
+```python
+new_tests = [
+		TestData("Absence makes the heart grow fonder.", "Absence makes the heart grow fonder.", 5.62),
+		TestData("A stitch in time saves nine.", "A stitch in time saves nine.", 4.68)
+		]
+
+sd.add_tests(new_tests)
+```
+
+Notes:\
+The required parameter, **tests**, must be a list, or else an error is raised:
+
+> TypeError: add_tests expects list
+
+In addition, the list cannot be empty, or else an error is raised:
+
+> ValueError: 0 tests passed, expects a minimum of 1
+
+Finally, the types of the items in the list must be of type TestData, or else an error is raised:
+
+> TypeError: can only pass collection of TestData, not "{illegal}"
+
+#### get_test
+
+`get_test` returns an object of type TestData from SessionData's existing list of tests at a specified index.
+
+Required parameters (1): **index** (*int*)
+
+Examples:
+```python
+tests = [
+	TestData("Actions speak louder than words.", "Actions speak louder than words.", 4.58),
+	TestData("A fool and his money are soon parted.", "A fool anf his miney are soon partid.", 3.53),
+	TestData("Appearances can be deceptive.", "Appesrances csn be deciptive.", 2.62)
+	]
+
+sd = SessionData(tests)
+
+sd.get_test(2)
+```
+Output (*TestData*):
+```python
+<pytyper.core.managers.TestData.TestData object at MEMORY_ADDRESS>
+```
+
+Notes:\
+The required parameter, **index**, must be within the bounds of the SessionData's existing list of tests, or else an error is raised:
+
+> IndexError: list index out of range: there is not TestData at position {index}
+
+<br>
+
 ## TestData
+
+`TestData` is a pytyper class that is effective in managing statistics for a particular typing test.
+
+Accessible attributes (7): **prompt** (*str*), **user_input** (*str*), **seconds** (*float*), **gross_wpm** (*float*), **net_wpm** (*float*),**accuracy** (*float*), **errors** (*int*)
+
+#### initialzier
+
+Required parameters (3): **prompt** (*str*), **user_input** (*str*), **seconds** (*str*)
+
+
+
