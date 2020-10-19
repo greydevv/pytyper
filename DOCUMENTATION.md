@@ -11,9 +11,24 @@ pip install pytyper
 <!-- (https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#) -->
 core
 - [calculation](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#calculation)
+  - [gross_wpm](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#gross_wpm)
+  - [net_wpm](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#net_wpm)
+  - [accuracy](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#accuracy)
 - [comparison](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#comparison)
+  - [conflicting](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#conflicting)
+  - [matching](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#matching)
+  - [chars](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#chars)
+  - [conflict_str](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#conflict_str)
 - [exceptions](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#exceptions)
+  - [allinstance](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#allinstance)
+  - [findillegals](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#formattinng)
 - [formatting](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#formatting)
+  - [round_up](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#round_up)
+  - [round_down](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#round_down)
+  - [to_percentage](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#to_percentage)
+  - [to_float](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#to_float)
+  - [match_length](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#match_length)
+  - [extend_str](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#extend_str)
 
 managers
 - [SessionData](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#SessionData)
@@ -157,7 +172,7 @@ Output (*int*):
 `conflict_str` creates a string with a specified character at the each index position in which a character in string **b** does not match its pair in string **a**.
 
 Required parameters (2): **a** (*str*), **b** (*str*)
-Optional parameters (1): *char* (*str*, default: `"^"`)
+Optional parameters (1): **char** (*str*, default: `"^"`)
 
 Examples:
 ```python
@@ -175,6 +190,41 @@ Output (*int*):
 <br>
 
 ## exceptions
+
+#### allinstance
+
+`allinstance` checks whether or not each item in a collection is of a specified type.
+
+Required parameters (2): **collection** (*list*, *tuple*, *set*), **legal_type** (*type*)
+
+Examples:
+```python
+collection = ["The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog."]
+
+allinstance(collection, str)
+```
+Output (*bool*):
+```python
+True
+```
+
+#### findillegals
+
+`findillegals` gathers a unique list of the types (represented as strings) in a collection that do not match a specified type.
+
+Required parameters (2): **collection** (*list*, *tuple*, *set*), **legal_type** (*type*)
+
+Examples:
+```python
+collection = ["The", "quick", 1, ["b", "r", "o", "w", "n"], "fox", "jumps", "over", "the", "lazy", "dog."]
+
+findillegals(collection, str)
+```
+Output (*list*: *str*):
+```python
+["int", "list"]
+```
+<br>
 
 ## formatting
 
