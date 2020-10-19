@@ -4,24 +4,55 @@ from math import ceil, floor
 
 def round_up(n, d=0):
 	"""
-	Rounds number n up at d decimal places.
+	Rounds a floating point number up to a specified amount of decimal places
+
+	Parameters
+	----------
+	n: float
+	d: int, default 0
+
+	Returns
+	-------
+	float
 	"""
 	mult = 10**d
 	return ceil(n*mult)/mult
 
 def round_down(n, d=0):
 	"""
-	Rounds number n down at d decimal places.
+	Rounds a floating point number down to a specified amount of decimal places
+
+	Parameters
+	----------
+	n: float
+	d: int, default 0
+
+	Returns
+	-------
+	float
 	"""
 	mult = 10**d
 	return floor(n*mult)/mult
 
 def to_percentage(n, should_round=True, up=True, d=3):
 	"""
-	Represents a float as a percentage. For example:
+	Represents a float, rounded up or down to a specified amount of decimal places, as a percentage
+
+	Parameters
+	----------
+	n: int
+	should_round: bool, default True
+	up: bool, default True
+	d: int, default 3
+
+	Returns
+	-------
+	str
+
+	Examples
+	--------
 	n = 0.25
-	s = "25%"
-	This method will display
+	--> "25.0%"
 	"""
 	if should_round:
 		n = round_up(n, d=d) if up else round_down(n, d=d)
@@ -32,20 +63,42 @@ def to_percentage(n, should_round=True, up=True, d=3):
 
 def to_float(s):
 	"""
-	Converts a percentage represented as a string back into a float. For example:
+	Converts a percentage back into a float (essentially the inverse of to_percentage()
+
+	Parameters
+	----------
+	s: str
+
+	Returns
+	-------
+	float
+
+	Examples
+	--------
 	s = "33.33%"
-	n = 0.3333
-	Disclaimer: if n is converted to a string using to_percentage() and then converted back into a float via to_float(), n will have lost precision.
+	--> 0.3333
 	"""
 	n = float(s[:-1])/100
 	return n
 
 def match_length(a, b):
 	"""
-	Matches the lengths of string 'a' and string 'b' by placing blank spaces in the shorter of the two strings
-	Used to compare all of the characters. For example, when string 'b' has a lesser length than string 'a':
-	a --->  'The quick brown fox jumps over the lazy dog'
-	b --->  'The quick brown fox                        '
+	Matches the lengths of two strings by appending blank spaces to the shorter of the two
+
+	Parameters
+	----------
+	a: str
+	b: str
+
+	Returns
+	-------
+	tuple: str
+
+	Examples
+	--------
+	a = "The quick brown fox jumps over the lazy dog."
+	b = "The quick brown fox"
+	--> "The quick brown fox                         "
 	"""
 	diff = len(a)-len(b)
 	if diff != 0:
@@ -57,12 +110,24 @@ def match_length(a, b):
 			a = extend_str(a, abs(diff))
 	return a, b
 
-def extend_str(s, n):
+def extend_str(s, n, char=" "):
 	"""
-	Concatenates 'n' amount of blank spaces to string 's' via lists
-	Used in match_length()
-	Not imported by default
+	Extends a string by n amount of the specified character
+
+	Parameters
+	----------
+	s: str
+
+	Returns
+	-------
+	float
+
+	Examples
+	--------
+	s = "The quick brown fox"
+	n = 25
+	--> "The quick brown fox                         "
 	"""
 	s = list(s)
-	s.extend([' ']*n)
-	return ''.join(s)
+	s.extend([char]*n)
+	return "".join(s)

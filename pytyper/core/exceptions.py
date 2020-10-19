@@ -1,6 +1,15 @@
 def allinstance(collection, legal_type):
 	"""
-	Checks if all items in 'collection' (list, tuple, set) matches the 'legal_type' argument.
+	Checks the type of all items in a collection match a specified type
+
+	Parameters
+	----------
+	collection: list, tuple, or set
+	legal_type: type
+
+	Returns
+	-------
+	bool
 	"""
 	if not isinstance(collection, (list, tuple, set)):
 		illegal = type(collection).__name__
@@ -11,7 +20,17 @@ def allinstance(collection, legal_type):
 
 def findillegals(collection, legal_type):
 	"""
-	Returns a list of all of the unique types in 'collection' (list, tuple, set) that do not match the 'legal_type' argument.
+	Lists the types of items in a collection that do not match the specified type
+
+	Parameters
+	----------
+	collection: list, tuple, or set
+	legal_type: type
+
+	Returns
+	-------
+	list: str
+		returned list is unique i.e., no duplicates
 	"""
 	if not isinstance(collection, (list, tuple, set)):
 		illegal = type(collection).__name__
