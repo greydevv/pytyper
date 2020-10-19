@@ -35,7 +35,7 @@ The 'calculation' module handles necessary calculations for typing statistics.
 
 `gross_wpm` calculates the user's *gross words-per-minute* by diving the amount of words typed by the amount time it took to type type those characters (disregarding errors). The amount of words typed is not literally the amount of words typed, rather, it is the number of characters typed divided by five. The reasoning for this is because words like 'incomprehensibilities' should count for more than words like 'house' due to the difference in length.
 
-`gross_wpm` takes two parameters: **user_input** (*str*), and **seconds** (*float*).
+required parameters: **user_input** (*str*), and **seconds** (*float*)
 
 Examples:
 ```python
@@ -98,7 +98,7 @@ It may be helpful to use this function in conjunction with [`to_percentage`](htt
 `to_percentage` formats a percentage represented as a float into a percentage represented by a string.
 
 required parameters (1): n (*float*)\
-optional parameters (3): should_round (*bool*, default: `True`), up (*bool*, default: `True`), and **d** (*int*, default `3`)
+optional parameters (3): **should_round** (*bool*, default: `True`), **up** (*bool*, default: `True`), and **d** (*int*, default `3`)
 
 # Managers
 
