@@ -10,19 +10,10 @@ pip install pytyper
 ## Subpackages
 <!-- (https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#) -->
 core
-
+  * calculation.py
+  * comparison.py
+  * exceptions.py
+  * formatting.py
 managers
-
-
-pytyper
-|
-+-- core
-   |
-   +-- calculation.py
-   +-- comparison.py
-   +-- exceptions.py
-   +-- formatting.py
-   |-- managers
-      |
-      +-- SessionData.py
-      +-- TestData.py
+  * SessionData.py
+  * TestData.py
