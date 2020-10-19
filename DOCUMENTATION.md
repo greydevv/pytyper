@@ -51,7 +51,7 @@ Output (*float*):
 ```
 93.12169312169313
 ```
-<br>
+
 #### net_wpm
 `net_wpm` calculates the user's *net words-per-minute* by subtracting the amount of *errors-per-minute* from the *gross words-per-minute*. This is different from `gross_wpm` as `net_wpm` factors in the amount of errors made.
 
@@ -69,7 +69,7 @@ Output (*float*):
 ```
 40.211640211640216
 ```
-<br>
+
 #### accuracy
 `accuracy` calculates the user's typing *accuracy* by dividing the number of correctly typed characters by the total number of characters.
 
@@ -102,7 +102,6 @@ It may be helpful to use this function in conjunction with [`to_percentage`](htt
 
 Required parameters (1): n (*float*)\
 Optional parameters (3): **should_round** (*bool*, default: `True`), **up** (*bool*, default: `True`), and **d** (*int*, default `3`)
-<br>
 
 # Managers
 
