@@ -111,7 +111,7 @@ n = 0.8732
 
 round_up(n, d=2)
 ```
-Output:
+Output (*float*):
 ```python
 0.88
 ```
@@ -129,7 +129,7 @@ n = 0.8732
 
 round_down(n, d=2)
 ```
-Output:
+Output (*float*):
 ```python
 0.87
 ```
