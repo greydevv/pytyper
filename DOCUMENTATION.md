@@ -371,9 +371,9 @@ Required parameters (1): **tests** (*list*: *TestData*)
 Examples
 ```python
 new_tests = [
-	TestData("Absence makes the heart grow fonder.", "Absence makes the heart grow fonder.", 5.62),
-	TestData("A stitch in time saves nine.", "A stitch in time saves nine.", 4.68)
-	]
+		TestData("Absence makes the heart grow fonder.", "Absence makes the heart grow fonder.", 5.62),
+		TestData("A stitch in time saves nine.", "A stitch in time saves nine.", 4.68)
+		]
 
 sd.add_tests(new_tests)
 ```
