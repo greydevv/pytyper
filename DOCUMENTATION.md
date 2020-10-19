@@ -7,7 +7,7 @@ To install the latest version, run:
 pip install pytyper
 ```
 
-## Subpackages
+## Contents
 <!-- (https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#) -->
 core
 - [calculation](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#calculation)
@@ -24,7 +24,8 @@ A proof-of-concept CLI tool is hosted at:\
 https://github.com/greysonDEV/typeshell-cli
 
 ------
-
+<br>
+<br>
 # Core
 
 ## calculation
