@@ -46,9 +46,6 @@ https://github.com/greysonDEV/typeshell-cli
 
 ## calculation
 
-The 'calculation' module handles necessary calculations for typing statistics.
-<br>
-
 #### gross_wpm
 
 `gross_wpm` calculates the user's *gross words-per-minute* by diving the amount of words typed by the amount time it took to type type those characters (disregarding errors). The amount of words typed is not literally the amount of words typed, rather, it is the number of characters typed divided by five. The reasoning for this is because words like 'incomprehensibilities' should count for more than words like 'house' due to the difference in length.
