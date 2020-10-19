@@ -94,6 +94,86 @@ It may be helpful to use this function in conjunction with [`to_percentage`](htt
 
 ## comparison
 
+#### conflicting
+
+`conflicting` totals the number of characters in string **b** that do not match their pair in string **a**.
+
+Required parameters (2): **a** (*str*), **b** (*str*)
+
+Examples:
+```python
+a = "The quick brown fox jumps over the lazy dog."
+b = "The quikk bruwn fox jumps ovwr the laxu dog." # 5 differences
+
+conflicting(a, b)
+```
+Output (*int*):
+```python
+5
+```
+Notes:\
+`conflicting` will also account for missing characters, i.e. if string **b** has a different length than string **a**, that difference is added to the total number of characers that do not match their pairs.
+
+#### matching
+
+`matching` totals the number of characters in string **b** that match their pair in string **a**.
+
+Required parameters (2): **a** (*str*), **b** (*str*)
+
+Examples:
+```python
+a = "The quick brown fox jumps over the lazy dog."
+b = "The quikk bruwn fox jumps ovwr the laxu dog." # 39 matches
+
+conflicting(a, b)
+```
+Output (*int*):
+```python
+39
+```
+
+#### chars
+
+`chars` creates a list of all of the characters in string **b** that are either conflicting or matching with their pair in string **a**.
+
+Required parameters (2): **a** (*str*), **b** (*str*)
+
+Examples:
+```python
+a = "The quick brown fox jumps over the lazy dog."
+b = "The quikk bruwn fox jumps ovwr the laxu dog." # 5 errors
+
+chars(a, b, match=False)
+chars(a, b, match=True)
+```
+Output (*int*):
+```python
+["k", "u", "w", "x", "u"] # conflicting
+["T", "h", "e", "q", "u", "i", "k", " ", "b", "r", "w", "n", " ", "f", "o", "x", "j", "u", "m", "p", "s", " ", "o", "v", "r", " ", "t", "h", "e", " ", "l", "a", " ", "d", "o", "g"]
+```
+
+#### conflict_str
+
+`conflict_str` creates a string with a specified character at the each index position in which a character in string **b** does not match its pair in string **a**.
+
+Required parameters (2): **a** (*str*), **b** (*str*)
+Optional parameters (1): *char* (*str*, default: `"^"`)
+
+Examples:
+```python
+a = "The quick brown fox jumps over the lazy dog."
+b = "The quikk bruwn fox jumps ovwr the laxu dog." # 5 errors
+
+conflict_str(a, b)
+```
+Output (*int*):
+```python
+# "The quick brown fox jumps over the lazy dog."
+# "The quikk bruwn fox jumps ovwr the laxu dog."
+  "       ^    ^               ^        ^^     "
+```
+<br>
+
 ## exceptions
 
 ## formatting
@@ -188,7 +268,6 @@ Output (*tuple*):
 # "The quick brown fox                         "
 ("The quick brown fox jumps over the lazy dog.", "The quick brown fox                         ")
 ```
-
 
 #### extend_str
 
