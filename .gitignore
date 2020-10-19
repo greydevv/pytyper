@@ -1,4 +1,7 @@
-# Ignoring macOS .DS_store
+# Build folder.
+/build/
+
+# macOS .DS_store
 .DS_Store
 
 # Compiled python modules.
