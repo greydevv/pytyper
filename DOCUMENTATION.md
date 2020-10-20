@@ -184,6 +184,7 @@ Output (*int*):
 Required parameters (2):
 - **a** (*str*)
 - **b** (*str*)
+
 Optional parameters (1):
 - **char** (*str*, default: `"^"`)
 
@@ -251,6 +252,7 @@ Output (*list*: *str*):
 
 Required parameters (1):
 - **n** (*float*)
+
 Optional parameters (1):
 - **d** (*int*, default: `0`)
 
@@ -271,6 +273,7 @@ Output (*float*):
 
 Required parameters (1):
 - **n** (*float*)
+
 Optional parameters (1):
 - **d** (*int*, default: `0`)
 
@@ -291,6 +294,7 @@ Output (*float*):
 
 Required parameters (1):
 - **n** (*float*)
+
 Optional parameters (3):
 - **should_round** (*bool*, default: `True`)
 - **up** (*bool*, default: `True`)
@@ -354,6 +358,7 @@ Output (*tuple*):
 Required parameters (2):
 - **s** (*str*)
 - **n** (*n*)
+
 Optional parameters (1):
 - **char** (*str*, default: `" "`)
 
@@ -379,6 +384,7 @@ Output (*str*):
 
 Required parameters (1):
 - **tests** (*list*: *TestData*)
+
 Optional parameters (1):
 - **round_stats** (*bool*, default: `True`)
 
@@ -472,8 +478,8 @@ Required parameters (3):
 Accessible attributes (7):
 - **prompt** (*str*)
 - **user_input** (*str*)
-- **seconds** (*float*
-- **gross_wpm** (*float*
+- **seconds** (*float*)
+- **gross_wpm** (*float*)
 - **net_wpm** (*float*)
 - **accuracy** (*float*)
 - **errors** (*int*)
