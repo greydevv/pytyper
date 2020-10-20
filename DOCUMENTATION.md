@@ -46,7 +46,7 @@ https://github.com/greysonDEV/typeshell-cli
 
 ## calculation
 
-#### gross_wpm
+### gross_wpm
 
 `gross_wpm` calculates the user's *gross words-per-minute* by diving the amount of words typed by the amount time it took to type type those characters (disregarding errors). The amount of words typed is not literally the amount of words typed, rather, it is the number of characters typed divided by five. The reasoning for this is because words like 'incomprehensibilities' should count for more than words like 'house' due to the difference in length.
 
@@ -66,7 +66,7 @@ Output (*float*):
 93.12169312169313
 ```
 
-#### net_wpm
+### net_wpm
 
 `net_wpm` calculates the user's *net words-per-minute* by subtracting the amount of *errors-per-minute* from the *gross words-per-minute*. This is different from `gross_wpm` as `net_wpm` factors in the amount of errors made.
 
@@ -88,7 +88,7 @@ Output (*float*):
 40.211640211640216
 ```
 
-#### accuracy
+### accuracy
 
 `accuracy` calculates the user's typing *accuracy* by dividing the number of correctly typed characters by the total number of characters.
 
@@ -113,7 +113,7 @@ It may be helpful to use this function in conjunction with [`to_percentage`](htt
 
 ## comparison
 
-#### conflicting
+### conflicting
 
 `conflicting` totals the number of characters in string **b** that do not match their pair in string **a**.
 
@@ -135,7 +135,7 @@ Output (*int*):
 Notes:\
 `conflicting` will also account for missing characters, i.e. if string **b** has a different length than string **a**, that difference is added to the total number of characers that do not match their pairs.
 
-#### matching
+### matching
 
 `matching` totals the number of characters in string **b** that match their pair in string **a**.
 
@@ -155,7 +155,7 @@ Output (*int*):
 39
 ```
 
-#### chars
+### chars
 
 `chars` creates a list of all of the characters in string **b** that are either conflicting or matching with their pair in string **a**.
 
@@ -177,7 +177,7 @@ Output (*int*):
 ["T", "h", "e", "q", "u", "i", "k", " ", "b", "r", "w", "n", " ", "f", "o", "x", "j", "u", "m", "p", "s", " ", "o", "v", "r", " ", "t", "h", "e", " ", "l", "a", " ", "d", "o", "g"]
 ```
 
-#### conflict_str
+### conflict_str
 
 `conflict_str` creates a string with a specified character at the each index position in which a character in string **b** does not match its pair in string **a**.
 
@@ -204,7 +204,7 @@ Output (*int*):
 
 ## exceptions
 
-#### allinstance
+### allinstance
 
 `allinstance` checks whether or not each item in a collection is of a specified type.
 
@@ -223,7 +223,7 @@ Output (*bool*):
 True
 ```
 
-#### findillegals
+### findillegals
 
 `findillegals` gathers a unique list of the types (represented as strings) in a collection that do not match a specified type.
 
@@ -245,7 +245,7 @@ Output (*list*: *str*):
 
 ## formatting
 
-#### round_up
+### round_up
 
 `round_up` will round a float up to a specified amount of decimal places.
 
@@ -265,7 +265,7 @@ Output (*float*):
 0.88
 ```
 
-#### round_down
+### round_down
 
 `round_down` will round a float down to a specified amount of decimal places.
 
@@ -285,7 +285,7 @@ Output (*float*):
 0.87
 ```
 
-#### to_percentage
+### to_percentage
 
 `to_percentage` formats a percentage represented as a float into a percentage represented by a string.
 
@@ -307,7 +307,7 @@ Output (*str*):
 "88.7%"
 ```
 
-#### to_float
+### to_float
 
 `to_float` converts a percentage back into a float. This operation is essentially the inverse of `to_percentage`.
 
@@ -325,7 +325,7 @@ Output (*float*):
 0.887
 ```
 
-#### match_length
+### match_length
 
 `match_length` matches the lengths of two strings by concatenating a number of blank spaces to the shorter string. The number of blanks spaces is determined by the difference in characters in the two strings.
 
@@ -347,7 +347,7 @@ Output (*tuple*):
 ("The quick brown fox jumps over the lazy dog.", "The quick brown fox                         ")
 ```
 
-#### extend_str
+### extend_str
 
 `extend_str` concatenates a specified amount of spaces to the end of a string. This is used primarily by `match_length`.
 
@@ -375,7 +375,7 @@ Output (*str*):
 
 `SessionData` is a pytyper class that is effective in managing all typing tests and statistics for a typing session. It is also responsible for calculating the average of all of the numerical statistics for the entire session.
 
-#### initializer
+### initializer
 
 - Required parameters (1):
   - **tests** (*list*: *TestData*)
@@ -398,7 +398,7 @@ The required parameter, **tests**, must be a list of type TestData. This is requ
 
 > TypeError: SessionData constructor not properly called!
 
-#### add_tests
+### add_tests
 
 `add_tests` adds a list of tests to SessionData's existing list of tests.
 
@@ -428,7 +428,7 @@ Finally, if the entirety of the items in the list are not of type TestData, an e
 
 > TypeError: can only pass collection of TestData, not "{illegal}"
 
-#### get_test
+### get_test
 
 `get_test` returns an object of type TestData from SessionData's existing list of tests at a specified index.
 
@@ -463,7 +463,7 @@ If the required parameter, **index**, is outside of the SessionData's list of te
 
 `TestData` is a pytyper class that is effective in managing statistics for a particular typing test.
 
-#### initialzier
+### initialzier
 
 - Required parameters (3):
   - **prompt** (*str*)
