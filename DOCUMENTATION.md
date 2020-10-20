@@ -9,7 +9,7 @@ pip install pytyper
 
 ## Contents
 <!-- (https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#) -->
-core
+[core](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#core)
 - [calculation](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#calculation)
   - [gross_wpm](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#gross_wpm)
   - [net_wpm](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#net_wpm)
@@ -30,7 +30,7 @@ core
   - [match_length](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#match_length)
   - [extend_str](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#extend_str)
 
-managers
+[managers](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#managers)
 - [SessionData](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#SessionData)
 - [TestData](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md#TestData)
 
