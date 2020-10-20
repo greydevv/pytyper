@@ -44,11 +44,11 @@ https://github.com/greysonDEV/typeshell-cli
 
 ## calculation
 
-`calculation` is a pytyper module which provides the necessary tools to calculate typing statistics. 
+`calculation` is a pytyper module that provides the necessary tools to calculate typing statistics. 
 
 ### gross_wpm
 
-`gross_wpm` calculates the user's *gross words-per-minute* by diving the amount of words typed by the amount time it took to type type those characters (disregarding errors). The amount of words typed is not literally the amount of words typed, rather, it is the number of characters typed divided by five. The reasoning for this is because words like 'incomprehensibilities' should count for more than words like 'house' due to the difference in length.
+`gross_wpm` calculates the user's *gross words-per-minute* by diving the number of words typed by the amount of time it took to type those characters (disregarding errors). The amount of words typed is not exactly the numbers of words typed, rather, it is the number of characters typed divided by five. The reasoning for this is because words like 'incomprehensibility' should count for more than words like 'house' due to the difference in length.
 
 - Required parameters (2):
   - **user_input** (*str*)
@@ -68,7 +68,7 @@ Output (*float*):
 
 ### net_wpm
 
-`net_wpm` calculates the user's *net words-per-minute* by subtracting the amount of *errors-per-minute* from the *gross words-per-minute*. This is different from `gross_wpm` as `net_wpm` factors in the amount of errors made.
+`net_wpm` calculates the user's *net words-per-minute* by subtracting the amount of *errors-per-minute* from the *gross words-per-minute*. This is different from `gross_wpm` as `net_wpm` factors in the number of errors made.
 
 - Required parameters (3):
   - **prompt** (*str*)
@@ -113,7 +113,7 @@ It may be helpful to use this function in conjunction with [`to_percentage`](htt
 
 ## comparison
 
-`comparison` is a pytyper module which makes comparing strings effective, focusing heavily on returning the similarities and differences in a variety of data types.
+`comparison` is a pytyper module which compares strings effectively, focusing heavily on obtaining the similarities and differences in a variety of data types and structures.
 
 ### conflicting
 
@@ -135,7 +135,7 @@ Output (*int*):
 5
 ```
 Notes:\
-`conflicting` will also account for missing characters, i.e. if string **b** has a different length than string **a**, that difference is added to the total number of characers that do not match their pairs.
+`conflicting` will also account for missing characters, i.e. if string **b** has a different length than string **a**, that difference is added to the total number of characters that do not match their pairs.
 
 ### matching
 
@@ -181,7 +181,7 @@ Output (*list*: *str*):
 
 ### conflict_str
 
-`conflict_str` creates a string with a specified character at the each index position in which a character in string **b** does not match its pair in string **a**.
+`conflict_str` creates a string with a specified character at each index position in which a character in string **b** does not match its pair in string **a**.
 
 - Required parameters (2):
   - **a** (*str*)
@@ -206,7 +206,7 @@ Output (*int*):
 
 ## exceptions
 
-`exceptions` is a pytyper module which simplifies parameter and operation validation.
+`exceptions` is a pytyper module that simplifies parameter and operation validation.
 
 ### allinstance
 
@@ -229,7 +229,7 @@ True
 
 ### findillegals
 
-`findillegals` gathers a unique list of the types (represented as strings) in a collection that do not match a specified type.
+`findillegals` gathers a unique list of the types (represented as strings) in a collection that does not match a specified type.
 
 - Required parameters (2):
   - **collection** (*list*, *tuple*, *set*)
@@ -342,7 +342,7 @@ Output (*float*):
 Examples:
 ```python
 a = "The quick brown fox jumps over the lazy dog."
-b = "The quick brow fox"
+b = "The quick brown fox"
 
 match_length(a, b)
 ```
@@ -430,11 +430,11 @@ If the required parameter, **tests**, is not of type list, an exception is raise
 
 > TypeError: add_tests expects list
 
-In addition, if the list is empty, an exception is raised:
+Also, if the list is empty, an exception is raised:
 
 > ValueError: 0 tests passed, expects a minimum of 1
 
-Finally, if the entirety of the items in the list are not of type TestData, an exception is raised:
+Finally, if the entirety of the list is not of type TestData, an exception is raised:
 
 > TypeError: can only pass collection of TestData, not "{illegal}"
 
@@ -473,7 +473,7 @@ If the required parameter, **index**, is outside of the SessionData's list of te
 
 `TestData` is a pytyper class that is effective in managing statistics for a particular typing test.
 
-### initialzier
+### initializer
 
 - Required parameters (3):
   - **prompt** (*str*)
@@ -487,6 +487,9 @@ If the required parameter, **index**, is outside of the SessionData's list of te
   - **net_wpm** (*float*)
   - **accuracy** (*float*)
   - **errors** (*int*)
+
+Notes:\
+Although there are only three required parameters, the initializer will perform necessary calculations based on the required parameters to fill in the other statistics.
 
 
 
