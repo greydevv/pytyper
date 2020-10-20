@@ -44,6 +44,8 @@ https://github.com/greysonDEV/typeshell-cli
 
 ## calculation
 
+`calculation` is a pytyper module which provides the necessary tools to calculate typing statistics. 
+
 ### gross_wpm
 
 `gross_wpm` calculates the user's *gross words-per-minute* by diving the amount of words typed by the amount time it took to type type those characters (disregarding errors). The amount of words typed is not literally the amount of words typed, rather, it is the number of characters typed divided by five. The reasoning for this is because words like 'incomprehensibilities' should count for more than words like 'house' due to the difference in length.
@@ -111,6 +113,8 @@ It may be helpful to use this function in conjunction with [`to_percentage`](htt
 
 ## comparison
 
+`comparison` is a pytyper module which makes comparing strings effective, focusing heavily on returning the similarities and differences in a variety of data types.
+
 ### conflicting
 
 `conflicting` totals the number of characters in string **b** that do not match their pair in string **a**.
@@ -169,10 +173,10 @@ b = "The quikk bruwn fox jumps ovwr the laxu dog." # 5 errors
 chars(a, b, match=False)
 chars(a, b, match=True)
 ```
-Output (*int*):
+Output (*list*: *str*):
 ```python
 ["k", "u", "w", "x", "u"] # conflicting
-["T", "h", "e", "q", "u", "i", "k", " ", "b", "r", "w", "n", " ", "f", "o", "x", "j", "u", "m", "p", "s", " ", "o", "v", "r", " ", "t", "h", "e", " ", "l", "a", " ", "d", "o", "g"]
+["T", "h", "e", "q", "u", "i", "k", " ", "b", "r", "w", "n", " ", "f", "o", "x", "j", "u", "m", "p", "s", " ", "o", "v", "r", " ", "t", "h", "e", " ", "l", "a", " ", "d", "o", "g"] # matching
 ```
 
 ### conflict_str
@@ -201,6 +205,8 @@ Output (*int*):
 <br>
 
 ## exceptions
+
+`exceptions` is a pytyper module which simplifies parameter and operation validation.
 
 ### allinstance
 
@@ -243,9 +249,11 @@ Output (*list*: *str*):
 
 ## formatting
 
+`formatting` is a pytyper module which aids in the formatting of numbers for mathematical and visual purposes.
+
 ### round_up
 
-`round_up` will round a float up to a specified amount of decimal places.
+`round_up` rounds a float up to a specified amount of decimal places.
 
 - Required parameters (1):
   - **n** (*float*)
@@ -265,7 +273,7 @@ Output (*float*):
 
 ### round_down
 
-`round_down` will round a float down to a specified amount of decimal places.
+`round_down` rounds a float down to a specified amount of decimal places.
 
 - Required parameters (1):
   - **n** (*float*)
@@ -396,9 +404,13 @@ The required parameter, **tests**, must be a list of type TestData. This is requ
 
 > TypeError: SessionData constructor not properly called!
 
+### get_tests
+
+`get_tests` is simply a getter for the SessionData's existing list of tests. It is best to avoid accessing SessionData's tests attribute directly when attempting to access the SessionData's existing list of tests. Instead, use this method to do so.
+
 ### add_tests
 
-`add_tests` adds a list of tests to SessionData's existing list of tests.
+`add_tests` adds a list of tests to SessionData's existing list of tests. As noted in `get_tests`, it is best to avoid accessing SessionData's tests attribute directly when attempting to add tests to SessionData's existing list of tests. Instead, use this method to do so.
 
 - Required parameters (1):
   - **tests** (*list*: *TestData*)
