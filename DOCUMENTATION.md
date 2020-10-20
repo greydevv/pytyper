@@ -50,9 +50,9 @@ https://github.com/greysonDEV/typeshell-cli
 
 `gross_wpm` calculates the user's *gross words-per-minute* by diving the amount of words typed by the amount time it took to type type those characters (disregarding errors). The amount of words typed is not literally the amount of words typed, rather, it is the number of characters typed divided by five. The reasoning for this is because words like 'incomprehensibilities' should count for more than words like 'house' due to the difference in length.
 
-Required parameters (2):
-- **user_input** (*str*)
-- **seconds** (*float*)
+- Required parameters (2):
+  - **user_input** (*str*)
+  - **seconds** (*float*)
 
 Examples:
 ```python
@@ -70,10 +70,10 @@ Output (*float*):
 
 `net_wpm` calculates the user's *net words-per-minute* by subtracting the amount of *errors-per-minute* from the *gross words-per-minute*. This is different from `gross_wpm` as `net_wpm` factors in the amount of errors made.
 
-Required parameters (3):
-- **prompt** (*str*)
-- **user_input** (*str*)
-- **seconds** (*float*)
+- Required parameters (3):
+  - **prompt** (*str*)
+  - **user_input** (*str*)
+  - **seconds** (*float*)
 
 Examples:
 ```python
@@ -92,9 +92,9 @@ Output (*float*):
 
 `accuracy` calculates the user's typing *accuracy* by dividing the number of correctly typed characters by the total number of characters.
 
-Required parameters (2):
-- **prompt** (*str*)
-- **user_input** (*str*)
+- Required parameters (2):
+  - **prompt** (*str*)
+  - **user_input** (*str*)
 
 Examples:
 ```python
@@ -117,9 +117,9 @@ It may be helpful to use this function in conjunction with [`to_percentage`](htt
 
 `conflicting` totals the number of characters in string **b** that do not match their pair in string **a**.
 
-Required parameters (2):
-- **a** (*str*)
-- **b** (*str*)
+- Required parameters (2):
+  - **a** (*str*)
+  - **b** (*str*)
 
 Examples:
 ```python
@@ -139,9 +139,9 @@ Notes:\
 
 `matching` totals the number of characters in string **b** that match their pair in string **a**.
 
-Required parameters (2):
-- **a** (*str*)
-- **b** (*str*)
+- Required parameters (2):
+  - **a** (*str*)
+  - **b** (*str*)
 
 Examples:
 ```python
@@ -159,9 +159,9 @@ Output (*int*):
 
 `chars` creates a list of all of the characters in string **b** that are either conflicting or matching with their pair in string **a**.
 
-Required parameters (2):
-- **a** (*str*)
-- **b** (*str*)
+- Required parameters (2):
+  - **a** (*str*)
+  - **b** (*str*)
 
 Examples:
 ```python
@@ -181,12 +181,11 @@ Output (*int*):
 
 `conflict_str` creates a string with a specified character at the each index position in which a character in string **b** does not match its pair in string **a**.
 
-Required parameters (2):
-- **a** (*str*)
-- **b** (*str*)
-
-Optional parameters (1):
-- **char** (*str*, default: `"^"`)
+- Required parameters (2):
+  - **a** (*str*)
+  - **b** (*str*)
+- Optional parameters (1):
+  - **char** (*str*, default: `"^"`)
 
 Examples:
 ```python
@@ -209,9 +208,9 @@ Output (*int*):
 
 `allinstance` checks whether or not each item in a collection is of a specified type.
 
-Required parameters (2):
-- **collection** (*list*, *tuple*, *set*)
-- **legal_type** (*type*)
+- Required parameters (2):
+  - **collection** (*list*, *tuple*, *set*)
+  - **legal_type** (*type*)
 
 Examples:
 ```python
@@ -228,9 +227,9 @@ True
 
 `findillegals` gathers a unique list of the types (represented as strings) in a collection that do not match a specified type.
 
-Required parameters (2):
-- **collection** (*list*, *tuple*, *set*)
-- **legal_type** (*type*)
+- Required parameters (2):
+  - **collection** (*list*, *tuple*, *set*)
+  - **legal_type** (*type*)
 
 Examples:
 ```python
@@ -250,11 +249,10 @@ Output (*list*: *str*):
 
 `round_up` will round a float up to a specified amount of decimal places.
 
-Required parameters (1):
-- **n** (*float*)
-
-Optional parameters (1):
-- **d** (*int*, default: `0`)
+- Required parameters (1):
+  - **n** (*float*)
+- Optional parameters (1):
+  - **d** (*int*, default: `0`)
 
 Examples:
 ```python
@@ -271,11 +269,10 @@ Output (*float*):
 
 `round_down` will round a float down to a specified amount of decimal places.
 
-Required parameters (1):
-- **n** (*float*)
-
-Optional parameters (1):
-- **d** (*int*, default: `0`)
+- Required parameters (1):
+  - **n** (*float*)
+- Optional parameters (1):
+  - **d** (*int*, default: `0`)
 
 Examples:
 ```python
@@ -292,13 +289,12 @@ Output (*float*):
 
 `to_percentage` formats a percentage represented as a float into a percentage represented by a string.
 
-Required parameters (1):
-- **n** (*float*)
-
-Optional parameters (3):
-- **should_round** (*bool*, default: `True`)
-- **up** (*bool*, default: `True`)
-- **d** (*int*, default `3`)
+- Required parameters (1):
+  - **n** (*float*)
+- Optional parameters (3):
+  - **should_round** (*bool*, default: `True`)
+  - **up** (*bool*, default: `True`)
+  - **d** (*int*, default `3`)
 
 Examples:
 ```python
@@ -315,8 +311,8 @@ Output (*str*):
 
 `to_float` converts a percentage back into a float. This operation is essentially the inverse of `to_percentage`.
 
-Required parameters (1):
-- **s** (*str*)
+- Required parameters (1):
+  - **s** (*str*)
 
 Examples:
 ```python
@@ -333,9 +329,9 @@ Output (*float*):
 
 `match_length` matches the lengths of two strings by concatenating a number of blank spaces to the shorter string. The number of blanks spaces is determined by the difference in characters in the two strings.
 
-Required parameters (2):
-- **a** (*str*)
-- **b** (*str*)
+- Required parameters (2):
+  - **a** (*str*)
+  - **b** (*str*)
 
 Examples:
 ```python
@@ -355,12 +351,11 @@ Output (*tuple*):
 
 `extend_str` concatenates a specified amount of spaces to the end of a string. This is used primarily by `match_length`.
 
-Required parameters (2):
-- **s** (*str*)
-- **n** (*n*)
-
-Optional parameters (1):
-- **char** (*str*, default: `" "`)
+- Required parameters (2):
+  - **s** (*str*)
+  - **n** (*n*)
+- Optional parameters (1):
+  - **char** (*str*, default: `" "`)
 
 Examples:
 ```python
@@ -407,8 +402,8 @@ The required parameter, **tests**, must be a list of type TestData. This is requ
 
 `add_tests` adds a list of tests to SessionData's existing list of tests.
 
-Required parameters (1):
-- **tests** (*list*: *TestData*)
+- Required parameters (1):
+  - **tests** (*list*: *TestData*)
 
 Examples
 ```python
@@ -437,7 +432,8 @@ Finally, if the entirety of the items in the list are not of type TestData, an e
 
 `get_test` returns an object of type TestData from SessionData's existing list of tests at a specified index.
 
-Required parameters (1): **index** (*int*)
+- Required parameters (1):
+  - **index** (*int*)
 
 Examples:
 ```python
