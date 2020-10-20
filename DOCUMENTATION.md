@@ -382,11 +382,10 @@ Output (*str*):
 
 #### initializer
 
-Required parameters (1):
-- **tests** (*list*: *TestData*)
-
-Optional parameters (1):
-- **round_stats** (*bool*, default: `True`)
+- Required parameters (1):
+  - **tests** (*list*: *TestData*)
+- Optional parameters (1):
+  - **round_stats** (*bool*, default: `True`)
 
 Examples:
 ```python
@@ -470,19 +469,18 @@ If the required parameter, **index**, is outside of the SessionData's list of te
 
 #### initialzier
 
-Required parameters (3):
-- **prompt** (*str*)
-- **user_input** (*str*)
-- **seconds** (*str*)
-
-Accessible attributes (7):
-- **prompt** (*str*)
-- **user_input** (*str*)
-- **seconds** (*float*)
-- **gross_wpm** (*float*)
-- **net_wpm** (*float*)
-- **accuracy** (*float*)
-- **errors** (*int*)
+- Required parameters (3):
+  - **prompt** (*str*)
+  - **user_input** (*str*)
+  - **seconds** (*str*)
+- Accessible attributes (7):
+  - **prompt** (*str*)
+  - **user_input** (*str*)
+  - **seconds** (*float*)
+  - **gross_wpm** (*float*)
+  - **net_wpm** (*float*)
+  - **accuracy** (*float*)
+  - **errors** (*int*)
 
 
 
