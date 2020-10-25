@@ -12,7 +12,7 @@ A proof-of-concept CLI tool is hosted at:\
 https://github.com/greysonDEV/typeshell-cli
 
 ## Docu-mini-tation
-Documentation for pytyper is currently not available; however, will be made available in the future.
+[pytyper documentation](https://github.com/greysonDEV/pytyper/blob/master/DOCUMENTATION.md)
 
 ## License
 pytyper is licensed under the [MIT](https://github.com/greysonDEV/pytyper/blob/master/LICENSE) License.
