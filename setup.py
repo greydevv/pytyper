@@ -1,12 +1,17 @@
 from setuptools import setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
 setup(
 	name='pytyper',
 	version='0.1',
-	description='Typing statistics calculations, string comparison, and formatting',
-	url='https://github.com/greysonDEV/pytyper',
 	author='Greyson Murray',
 	author_email='greysonmurray.dev@gmail.com',
+	description='Typing statistics calculations, string comparison, and formatting',
+	long_description=long_description,
+	long_description_content_type="text/markdown",
+	url='https://github.com/greysonDEV/pytyper',
 	license='MIT',
 	classifiers=[
 		"License :: OSI Approved :: MIT License",
@@ -17,6 +22,7 @@ setup(
 		"Intended Audience :: Education",
 		"Natural Language :: English"
 	],
+	python_requires='>=3.8',
 	packages=['pytyper'],
 	zip_safe=False
 	)
