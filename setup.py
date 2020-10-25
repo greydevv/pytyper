@@ -12,7 +12,10 @@ setup(
 		"License :: OSI Approved :: MIT License",
 		"Programming Language :: Python :: 3.8",
 		"Topic :: Games/Entertainment",
-		"Operating System :: MacOS"
+		"Operating System :: MacOS",
+		"Intended Audience :: Developers",
+		"Intended Audience :: Education",
+		"Natural Language :: English"
 	],
 	packages=['pytyper'],
 	zip_safe=False
