@@ -415,7 +415,7 @@ The required parameter, **tests**, must be a list of type TestData. This is requ
 - Required parameters (1):
   - **tests** (*list*: *TestData*)
 
-Examples
+Examples:
 ```python
 new_tests = [
 	TestData("Absence makes the heart grow fonder.", "Absence makes the heart grow fonder.", 5.62),
