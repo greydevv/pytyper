@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
 	name='pytyper',
-	version='0.0.1',
+	version='0.0.2',
 	author='Greyson Murray',
 	author_email='greysonmurray.dev@gmail.com',
 	description='Typing statistics calculations, string comparison, and formatting',
