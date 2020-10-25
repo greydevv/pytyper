@@ -5,7 +5,9 @@ pytyper is a Python library that provides the user with basic functions that dea
 Not only does pytyper implement typing calculations, it also implements string modification, comparison, and number formatting.
 
 ## Installation
-pytyper is currently in the process of being uploaded to `PyPI` for installation.
+```
+pip install pytyper
+```
 
 ## Usage
 A proof-of-concept CLI tool is hosted at:\
